@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+
+            numero1 = Math.floor(Math.random() * 11);;
+            var numeros = new Array(100);
+            
+            for(i = 0; i < 100; i++){
+                while(numeros.includes(numero1)){
+                    numero1 = Math.floor(Math.random() * 1001);
+                }
+                numeros[i] = numero1;
+            }
+            console.log(numeros);
+
+        </script>
+    </head>
+</html>
+
