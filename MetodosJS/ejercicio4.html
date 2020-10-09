@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+
+        function guion(){ 
+        var cadena = "Me gustan mucho los animales";
+        var NuevaCadena = "";
+
+        for(i = 0; i < cadena.length; i++){
+            
+            if(i == cadena.length-1){
+                NuevaCadena = NuevaCadena + cadena[i];
+            }else if(cadena[i] == " "){
+                NuevaCadena = NuevaCadena + "";
+            }else{
+                NuevaCadena = NuevaCadena + cadena[i] + "-";
+            }
+        }
+        console.log(NuevaCadena);
+        }
+
+        guion();
+        </script>
+    </head>
+</html>

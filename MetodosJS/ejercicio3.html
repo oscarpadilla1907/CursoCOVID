@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script>
+
+        function palindromos(){ 
+
+        var palabra = prompt("Inserte una palabra");
+        var palabraV = "";
+        for(i = palabra.length - 1; i >= 0; i--){
+          palabraV += palabra[i];
+        }
+
+        if(palabraV == palabra){
+            console.log("Es palindromo")
+        }else{
+            console.log("No es palindromo")
+        }
+        console.log(palabraV);
+        }
+
+        palindromos();
+        </script>
+    </head>
+</html>

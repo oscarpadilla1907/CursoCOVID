@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+
+            function nemo(){ 
+
+            var nemo = "Nemo";
+            var frase = prompt("Introduce una frase");
+            var esplit = frase.split(" ", frase.length);
+            var posicion = esplit.indexOf(nemo);
+
+            if(esplit.includes(nemo)){
+                console.log("Tengo a nemo en la posicion "+posicion);
+            }else{
+                console.log("No tenemos a nemo");
+            }
+            }
+
+            nemo();
+
+        </script>
+    </head>
+</html>
