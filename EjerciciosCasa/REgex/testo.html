@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <h1 id="frase" align="center">Hola soy un mardito testo</h1>
+    </head>
+
+    <body>
+        <script>
+            
+            function texto(){
+                const esconder = document.getElementById('frase');
+                if(esconder.innerHTML == "Hola soy un mardito testo"){
+                    esconder.innerHTML = "&nbsp;";
+                }else{
+                    esconder.innerHTML = "Hola soy un mardito testo";
+                }
+            }
+
+        </script>
+    
+        <center>
+            <button onclick="texto()">Purzame</button>
+        </center>
+    </body>
+</html>
