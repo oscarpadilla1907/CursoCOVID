@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+
+            class Circulo{
+                constructor(radio){
+                    this.radio = radio;
+                }
+            
+                getArea(){
+                    return Math.PI * Math.pow(this.radio, 2);
+                }
+
+                getPermitro(){
+                    return 2 * Math.PI * this.radio;
+                }
+            }
+
+            
+            c1 = new Circulo(2);
+            c1.getArea();
+            c1.getPermitro();
+
+        </script>
+    </head>
+</html>

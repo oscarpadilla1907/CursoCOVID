@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+
+
+        function invertir(){ 
+            var obj = {
+                a: 1,
+                b: 2,
+                c: 3
+            }
+
+            var array = (Object.entries(obj));
+            var keys = (Object.keys(obj));
+            var values = (Object.values(obj));
+
+            for(i = 0; i < array.length; i++){
+                for(y = 0; y < array[i].length; y++){
+                    if(y == 0){ 
+                    array[i][y] = values[i];
+                    }else if(y == 1){
+                        array[i][y] = keys[i];
+                    }
+                }
+            }
+
+            var nuevoitem = Object.fromEntries(array);
+            
+            console.log(nuevoitem);
+            console.log(array);
+        }
+
+        invertir();
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+
+            class Deportista{
+                constructor(nombre, edad, altura, peso){
+                    this.nombre = nombre;
+                    this.edad = edad;
+                    this.altura = altura;
+                    this.peso = peso;
+                }
+
+                getNombre(){
+                    return this.nombre();
+                }
+                getEdad(){
+                    return this.edad();
+                }
+                getAltura(){
+                    return this.altura();
+                }
+                getPeso(){
+                    return this.peso();
+                }
+            }
+
+            p1 = new Deportista("Oscar", 20, 169, 57);
+            console.log(p1);
+
+        </script>
+    </head>
+</html>
