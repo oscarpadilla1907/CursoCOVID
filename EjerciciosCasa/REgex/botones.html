@@ -1,0 +1,41 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <script>
+
+            function colores(palabra){
+                var color2 = "";
+                var color3 = "";
+                var simbolos, color;
+	            simbolos = "0123456789ABCDEF";
+	            color = "#";
+
+	            for(var i = 0; i < 6; i++){
+	                color = color + simbolos[Math.floor(Math.random() * 16)];
+                }
+                if(palabra == "Cambiame de color"){
+                    color2 = color;
+                    document.getElementById(1).style.backgroundColor=color2;
+                    console.log(color2);
+                    
+                }color3 = color2;
+                if(palabra == "Cojo el color del primero y vuelve a su original"){
+                    document.getElementById(2).style.backgroundColor=color3;
+                    document.getElementById(1).style.backgroundColor="#81FFF7";
+                }
+                
+            }
+
+        </script>
+
+
+        <center style="margin-top: 60px;">
+            <button style="font-size: 30px; background-color: #81FFF7;" onclick="colores('Cambiame de color')" id="1">Cambiame de color</button>
+            <button style="font-size: 30px; background-color: #FF8181;" onclick="colores('Cojo el color del primero y vuelve a su original')" id="2">Cojo el color del primero y vuelve a su original</button>
+            <button style="font-size: 30px; background-color: #9EFF81;" onclick="colores()" value="3">Yo hago lo mismo con el segundo</button>
+        </center>
+    </body>
+</html>

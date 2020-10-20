@@ -1,19 +1,37 @@
 <html>
     <head>
-        <h1 align="center">Cambiame de color porfa</h1>
+        <h1 align="center">Cambiame de color :)</h1>
         
         <center><label for="colors">Choose a color</label>
-
             <select name="colors" id="colors">
-              <option value="asuh">asuh</option>
-              <option value="roho">roho</option>
+              <option value="azul">azul</option>
+              <option value="rojo">rojo</option>
               <option value="rosa">rosa</option>
-              <option value="sarmon">sarmon</option>
+              <option value="naranja">naranja</option>
+            </select>
+            <button onclick="colores()">Purzame</button>
         </center>
-</select>
+        
     </head>
 
     <body>
-        
+        <script>
+
+            function colores(){
+                const parrafo = document.createElement('p');
+                document.body.appendChild(parrafo);
+                var comboboxValue = document.getElementById('colors').value;
+                if(comboboxValue == "rojo"){
+                    document.body.style.backgroundColor='#FF3C3C';
+                }else if(comboboxValue == "azul"){
+                    document.body.style.backgroundColor='#3CFFB8';
+                }else if(comboboxValue == "naranja"){
+                    document.body.style.backgroundColor='#FF9644';
+                }else if(comboboxValue == "rosa"){
+                    document.body.style.backgroundColor='#F889FF';
+                }
+            }
+
+        </script>
     </body>
 </html>
