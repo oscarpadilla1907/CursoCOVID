@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: url('../img/back.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Open Sans', Sans-serif, Arial, Helvetica;
+}
+
+a { text-decoration: none;}
+
+.contenedor{
+	width: 90%;
+	max-width: 700px;
+	margin: auto;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.tarjeta{
+	background-color: white;
+	margin: 40px 0;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+
+/*BANNER*/
+
+.banner{
+	overflow: hidden;
+	z-index: 1000;
+	position: relative;
+}
+
+.banner .img{
+	position: relative;
+	width: 100%;
+}
+
+.banner .img img{
+	vertical-align: top;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
