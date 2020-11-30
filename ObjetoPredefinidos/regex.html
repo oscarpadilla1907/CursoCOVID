@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Regex</title>
+    </head>
+
+    <body>
+        <script>
+
+            function isLastCharacterN(word){
+                let control = false;
+
+                if (word.endsWith('n')){
+                    control = true
+                }else{
+                    control = false
+                }
+
+                console.log(control)
+            }
+            
+            function getFilename(path){
+                let nombre = path.split('/').pop()
+                console.log(nombre)
+            }
+            
+            function replaceVowels(str, ch){
+                console.log(str.replace(/[aeiou]/g, ch));
+            }
+        </script>
+    </body>
+</html>

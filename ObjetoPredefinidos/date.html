@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Date</title>
+    </head>
+
+    <body>
+        <script>
+
+            function timeForMilkAndCookies(date){
+                let control = false
+                if(date.getMonth() == 11 && date.getDate() == 24){
+                    control = true
+                }else{
+                    control = false
+                }
+                console.log(control)
+            }
+            timeForMilkAndCookies(new Date(2013, 11, 24))
+
+            function getDay(day) {
+	            var dayList = {
+		            0: 'Domingo',
+            		1: 'Lunes',
+            		2: 'Martes',
+            		3: 'Miercoles',
+            		4: 'Jueves',
+            		5: 'Viernes',
+            		6: 'Sabado'
+            	}
+            	console.log(dayList[new Date(day).getDay()])
+            }
+            getDay("12/07/2016")
+
+            function formatDate(date){
+                let [mes, dia, anio] = date.split('/');
+                console.log(anio + dia + mes);
+            }
+
+            formatDate("11/12/2019")
+        </script>
+    </body>
+</html>
