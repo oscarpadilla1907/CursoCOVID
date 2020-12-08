@@ -46,6 +46,7 @@
             </div>
 
             <div id="div3">
+                <h2>Grupos llenos</h2>
                 <input type="button" value="Crear grupos" onclick="crear()">
             </div>
 
@@ -59,6 +60,8 @@
             let grupos = 0;
             var personas = 0;
             var nombres_lista = new Array();
+            var print_grupos = new Array();
+            var numero_de_grupo = 1;
 
             function fgrupos(){
                 var ngrupos = document.getElementById("ngrupos").value;
@@ -96,6 +99,7 @@
                     let div = document.getElementById("boton");
                     let padre = div.parentNode;
                     padre.removeChild(div)
+                    document.getElementById("div2").style.visibility = "hidden";
                     document.getElementById("div3").style.visibility = "visible";
                 }
             }
@@ -103,13 +107,31 @@
             function crear(){
                 document.getElementById("div3").style.visibility = "hidden";
                 document.getElementById("div2").style.visibility = "hidden";
+                document.getElementById("div4").style.visibility = "visible";
 
                 nombres_lista.sort(() => Math.random()-2)
                 console.log(nombres_lista)
 
-                //while(grupos > 0){
-                    
-                //}
+                while(grupos > 0){
+                    console.log(personas)
+                    var nombre1 = ""
+
+                    for(i = 0; i < personas; i++){
+                        nombre1 = "";
+                        nombre1 = nombres_lista.pop();
+                        print_grupos.push(nombre1)
+                        nombres_lista.pop()
+                    }
+
+                    var newDiv = document.createElement("div"); 
+                    var newContent = document.createTextNode("Grupo "+numero_de_grupo+" : "+print_grupos); 
+                    newDiv.appendChild(newContent); 
+                    var currentDiv = document.getElementById("div1"); 
+                    document.body.insertBefore(newDiv, currentDiv); 
+                    grupos = grupos - 1;
+
+                    print_grupos = []
+                }
             }
 
 
