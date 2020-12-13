@@ -1,0 +1,67 @@
+
+
+tr{
+    background-color: rgb(192, 192, 192);
+}
+
+th{
+    width: 40px;
+    height: 40px;
+}
+
+th:hover{
+    background-color: gray;
+}
+
+.signos{
+    display: block;
+    margin-left: 200px;
+}
+
+#div2{
+    margin-left: 170px;
+    margin-top: -165px;
+}
+
+p:hover{
+    background-color: gray;
+}
+
+p{
+    background-color:  rgb(192, 192, 192);
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+#main{
+    background-color: rgba(22, 22, 22, 0.11);
+    width: 250px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+input{
+    margin-top: 10px;
+    height: 40px;
+}
+
+#igual{
+    margin-top: -40px;
+    margin-left: 30px;
+}
+
+#igual2{
+    width: 90px;
+}
+
+#clear{
+    margin-left: 22px;
+    margin-top: -40px;
+}
+
+table{
+    margin-right: 40px;
+}
+
