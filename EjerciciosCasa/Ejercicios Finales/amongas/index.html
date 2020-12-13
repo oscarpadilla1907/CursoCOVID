@@ -1,0 +1,242 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+    #todo {
+      visibility: hidden;
+    }
+
+    h1,
+    h2 {
+      font-family: 'Indie Flower', cursive;
+    }
+
+    #player1,
+    #player2,
+    #player3,
+    #player4,
+    #player5,
+    #player6,
+    #player7,
+    #player8,
+    #player9,
+    #player10 {
+      visibility: hidden;
+    }
+
+    .colors {
+      width: 100px;
+      height: 90px;
+    }
+
+    .v {
+      width: 55px;
+    }
+
+    .v:hover {
+      transform: scale(1.1);
+      transition: all 1s;
+    }
+
+    .x {
+      width: 50px;
+    }
+
+    .x:hover {
+      transform: scale(1.15);
+      transition: all 1s;
+    }
+
+    .report {
+      width: 10%;
+      float: right;
+    }
+
+    .report:hover {
+      transform: scale(1.15);
+      transition: all 1s;
+    }
+
+    .h2impostor{
+      font-size: 50px;
+    }
+
+    #impostor{
+      visibility: hidden;
+    }
+
+    #crew{
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <center>
+      <h1>Among Us</h1>
+      <h2>Numero de jugadores</h2>
+      <input type="number" id="players_numero">
+      <input type="button" value="Jugar" onclick="pintar()">
+    </center>
+  </div>
+  <div id="todo">
+    <div class="container">
+      <ul>
+        <li id="player1">
+          <div class="bottom">Gabri</div>
+          <img src="/colores/amarillo.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="win()">
+          <img src="/colores/x.png" class="x" onclick="fail()">
+          <img src="/colores/report.png" class="report" onclick="reportar('Gabri')">
+        </li>
+        <li id="player2">
+          <div class="bottom">Enrique</div>
+          <img src="/colores/azul.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Enrique')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Enrique')">
+        </li>
+        <li id="player3">
+          <div class="bottom">Pablo</div>
+          <img src="/colores/blanco.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Pablo')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Pablo')">
+        </li>
+        <li id="player4">
+          <div class="bottom">Mono</div>
+          <img src="/colores/celeste.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Mono')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Mono')">
+        </li>
+        <li id="player5">
+          <div class="bottom">Oscar</div>
+          <img src="/colores/marron.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Oscar')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Oscar')">
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <ul>
+        <li id="player6">
+          <div class="bottom">Ricardo</div>
+          <img src="/colores/mandarina.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Ricardo')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Ricardo')">
+        </li>
+        <li id="player7">
+          <div class="bottom">Jesus</div>
+          <img src="/colores/morado.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Jesus')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Jesus')">
+        </li>
+        <li id="player8">
+          <div class="bottom">Espe</div>
+          <img src="/colores/rojo.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Espe')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Espe')">
+        </li>
+        <li id="player9">
+          <div class="bottom">Mario</div>
+          <img src="/colores/negro.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Mario')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Mario')">
+        </li>
+        <li id="player10">
+          <div class="bottom">Sergio</div>
+          <img src="/colores/verde.png" class="colors">
+          <img src="/colores/v.png" class="v" onclick="fail()">
+          <img src="/colores/x.png" class="x" onclick="alerta('Sergio')">
+          <img src="/colores/report.png" class="report" onclick="reportar('Sergio')">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <center>
+  <div id="impostor">
+    <h1>(Gabri)</h1>
+    <img src="/colores/amarillo.png" alt="">
+    <h2 class="h2impostor">IMPOSTOR WINS</h2>
+  </div>
+</center>
+<center>
+  <div id="crew">
+
+    <img src="/colores/victoria.jpg" alt="">
+  </div>
+</center>
+  <script>
+
+    function pintar() {
+      var nplayers = document.getElementById("players_numero").value;
+
+      if (nplayers < 3 || nplayers > 10) {
+        alert("Minimo 3 jugadores y maximo 10")
+      } else {
+        cambio("url('/colores/back.jpg')")
+        let div = document.getElementById("header");
+        let padre = div.parentNode;
+        padre.removeChild(div);
+        document.getElementById("todo").style.visibility = "visible";
+        var numero_string = ""
+        var player_string = ""
+
+        for (i = 1; i <= nplayers; i++) {
+          numero_string = i;
+          player_string = "player" + numero_string;
+
+          console.log(numero_string, player_string)
+          document.getElementById(player_string).style.visibility = "visible";
+        }
+      }
+    }
+
+    function fail(){
+      cambio("none");
+      let div = document.getElementById("todo");
+      let padre = div.parentNode;
+      padre.removeChild(div);
+      document.getElementById("impostor").style.visibility = "visible";
+    }
+
+    function win(){
+      cambio("none");
+      let div = document.getElementById("todo");
+      let padre = div.parentNode;
+      padre.removeChild(div);
+
+      let div2 = document.getElementById("impostor");
+      let padre2 = div2.parentNode;
+      padre2.removeChild(div2);
+
+      
+      document.getElementById("crew").style.visibility = "visible"; 
+    }
+
+    function cambio(url){
+      document.body.style.backgroundImage = url;
+    }
+
+    function alerta(nombre){
+      alert("No has votado a "+nombre)
+    }
+
+    function reportar(nombre){
+      alert("Has reportado a "+nombre+" por puro placer, sos malo..")
+    }
+
+  </script>
+</body>
+
+</html>
