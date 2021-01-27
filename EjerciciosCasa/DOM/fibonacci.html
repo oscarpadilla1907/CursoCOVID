@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <h1 id="boton" align="center">Er Fibonasi</h1>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var numero1 = 0;
+            var numero2 = 1;
+
+            function fibonacci(){
+
+                var result = numero1 + numero2;
+                numero1 = numero2;
+                numero2 = result;
+                const numero = document.getElementById('boton');
+
+
+                //numero.innerHTML = result;
+
+                const parrafo = document.createElement('p');
+                document.body.appendChild(parrafo);
+                parrafo.innerHTML = '<center>'+result+'</center>';
+
+                
+
+            }
+        </script>
+        <center>
+            <button onclick="fibonacci()">Purzame</button>
+        </center>
+        
+    </body>
+</html>

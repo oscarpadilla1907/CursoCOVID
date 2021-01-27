@@ -1,0 +1,138 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <h1>CALCULADORA</h1>
+        <div id="main">
+            
+            <table>
+                <tr>
+                    <input type="text" id="input" value="" readonly="readonly">
+                </tr>
+                <tr>
+                    <th value="7" onclick="imprimir(7)">7</th>
+                    <th value="8" onclick="imprimir(8)">8</th>
+                    <th value="9" onclick="imprimir(9)">9</th>
+                </tr>
+                <tr>
+                    <th value="4" onclick="imprimir(4)">4</th>
+                    <th value="5" onclick="imprimir(5)">5</th>
+                    <th value="6" onclick="imprimir(6)">6</th>
+                </tr>
+                <tr>
+                    <th value="1" onclick="imprimir(1)">1</th>
+                    <th value="2" onclick="imprimir(2)">2</th>
+                    <th value="3" onclick="imprimir(3)">3</th>
+                </tr>
+                <tr>
+                    <th onclick="igual()">=</th>
+                    <th value="0" onclick="imprimir(0)">0</th>
+                    <th onclick="CC()">C</th>
+                </tr>
+            </table>
+
+            <div id="div2">
+                <p onclick="sumar()">+</p>
+                <p onclick="restar()">-</p>
+                <p onclick="multiplicar()">*</p>
+                <p onclick="dividir()">%</p>
+            </div>
+            
+        </div>
+    </center>
+
+    <script>
+        var numero = 0;
+        var texto = "";
+        var numero1 = 0;
+        var numero2 = 0;
+        var numeroasumar = 0;
+        var resultado = 0;
+        
+        
+        function imprimir(num){
+            numero = num;
+            var text = document.getElementById("input");
+            text.value = text.value + numero;
+            numero = text.value;
+        }
+
+
+        function CC(){
+            numero = 0;
+            var text = document.getElementById("input");
+            text.value = "";
+            numero1 = 0;
+            numero2 = 0;
+            texto = "";
+        }
+
+        function sumar(){
+            var text = document.getElementById("input");
+            numeroasumar = new Number(text.value);
+            console.log(numeroasumar)
+            numero = numero + "+";
+            text.value = "";
+            texto = String(numero);
+            
+        }
+
+        function restar(){
+            var text = document.getElementById("input");
+            numeroasumar = new Number(text.value);
+            console.log(numeroasumar)
+            numero = numero + "-";
+            text.value = "";
+            texto = String(numero);
+            
+        }
+
+        function multiplicar(){
+            var text = document.getElementById("input");
+            numeroasumar = new Number(text.value);
+            console.log(numeroasumar)
+            numero = numero + "*";
+            text.value = "";
+            texto = String(numero);
+            
+        }
+
+        function dividir(){
+            var text = document.getElementById("input");
+            numeroasumar = new Number(text.value);
+            console.log(numeroasumar)
+            numero = numero + "/";
+            text.value = "";
+            texto = String(numero);
+            
+        }
+
+        function igual(){
+            var text = document.getElementById("input");
+            numero2 = new Number(text.value);
+
+            for(i = 0; i < texto.length; i++){
+                if(texto[i] == "+"){
+                    text.value = numeroasumar + numero2;
+                }else if(texto[i] == "-"){ 
+                    text.value = numeroasumar - numero2;
+                }else if (texto[i] == "*"){
+                    text.value = numeroasumar * numero2;
+                }else if (texto[i] == "/"){
+                    text.value = numeroasumar / numero2;
+                }else if(texto[i] != "+" || texto[i] != "*" || texto[i] != "-" || texto[i] != "%"){
+                    texto[i] = texto[i]
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
